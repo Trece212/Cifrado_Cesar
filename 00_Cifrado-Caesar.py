@@ -5,12 +5,11 @@ Caracteres = ['A', 'Á', 'a', 'á', 'B', 'b', 'C', 'c', 'D', 'd', 'E', 'É',
               'T', 't', 'U', 'Ú', 'u', 'ú', 'V', 'v', 'W', 'w', 'X', 'x',
               'Y', 'Ý', 'y', 'ý', 'Z', 'z', ' ']
 
-# Variables para testear
-Caracter = 'Z'
+# Variables para testeo
+Cadena_caracteres = 'Los poemas breves son una muestra de que la expresión artística puede ocurrir con unas pocas palabras'
 Cambio = 7
-Direccion = True
 
-def calcular_posicion (caracteres_cp=list, caracter_cp=int, cambio_cp=int, direccion_cp=bool):
+def calcular_posicion (caracteres_cp=list, caracter_cp=int, cambio_cp=int, direccion_cp=bool) -> int:
     total_caracteres = len(caracteres_cp) - 1
 
     if direccion_cp == True:
@@ -33,13 +32,40 @@ def calcular_posicion (caracteres_cp=list, caracter_cp=int, cambio_cp=int, direc
         else:
             return posicion_caracter_na
 
-# Funcion para testear
-def posicion (caracteres_p=list, caracter_p=str):
-    posicion = caracteres_p.index(caracter_p)
-    return posicion
+def cifrar_caracteres (caracteres_cc=list, cadena_caracteres=str, cifrar=bool) -> str:
+    numero_caracteres = len(cadena_caracteres)
+    par_inpar = numero_caracteres % 2 == 0
+    numero = 0
+    salida = ""
 
-# Funcion para testear
-for x in Caracteres:
-    caracter_m = Caracteres[calcular_posicion(Caracteres, x, Cambio, True)]
-    caracter_n = Caracteres[calcular_posicion(Caracteres, x, Cambio, False)]
-    print(f'{x} - {posicion(Caracteres, x)} - {caracter_m} - {calcular_posicion(Caracteres, x, Cambio, True)} - {caracter_n} - {calcular_posicion(Caracteres, x, Cambio, False)}')
+    if par_inpar == False:
+        numero += 1
+
+    if cifrar == True:
+        for i in cadena_caracteres:
+            if numero == 0:
+                salida = salida + caracteres_cc[calcular_posicion(Caracteres, i, Cambio, True)]
+                numero += 1
+            elif numero == 1:
+                salida = salida + caracteres_cc[calcular_posicion(Caracteres, i, Cambio, False)]
+                numero -= 1
+    
+    if cifrar == False:
+        for i in cadena_caracteres:
+            if numero == 0:
+                salida = salida + caracteres_cc[calcular_posicion(Caracteres, i, Cambio, False)]
+                numero += 1
+            elif numero == 1:
+                salida = salida + caracteres_cc[calcular_posicion(Caracteres, i, Cambio, True)]
+                numero -= 1
+
+    return salida
+
+# Testeo
+cifrado = cifrar_caracteres(Caracteres, Cadena_caracteres, True)
+decifrado = cifrar_caracteres(Caracteres, cifrado, False)
+
+print('-- Detalles del algoritmo --\n')
+print(f'Entrada: {Cadena_caracteres}\n')
+print(f'Cifrado: {cifrado}\n')
+print(f'Decifrar: {decifrado}\n')
