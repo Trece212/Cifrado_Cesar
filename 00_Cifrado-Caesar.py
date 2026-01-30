@@ -6,7 +6,6 @@ Caracteres = ['A', 'Á', 'a', 'á', 'B', 'b', 'C', 'c', 'D', 'd', 'E', 'É',
               'Y', 'Ý', 'y', 'ý', 'Z', 'z', ' ']
 
 # Variables para testeo
-Cadena_caracteres = 'Los poemas breves son una muestra de que la expresión artística puede ocurrir con unas pocas palabras'
 Cambio = 7
 
 def calcular_posicion (caracteres_cp=list, caracter_cp=int, cambio_cp=int, direccion_cp=bool) -> int:
@@ -61,11 +60,28 @@ def cifrar_caracteres (caracteres_cc=list, cadena_caracteres=str, cifrar=bool) -
 
     return salida
 
-# Testeo
-cifrado = cifrar_caracteres(Caracteres, Cadena_caracteres, True)
-decifrado = cifrar_caracteres(Caracteres, cifrado, False)
+run = True
+while run == True:
+    print('-- OPCIONES --\n')
+    print('- Cifrar = 1\n- Decifrar = 2\n- Salir = 0\n')
 
-print('-- Detalles del algoritmo --\n')
-print(f'Entrada: {Cadena_caracteres}\n')
-print(f'Cifrado: {cifrado}\n')
-print(f'Decifrar: {decifrado}\n')
+    opciones = input(': ')
+    
+    match opciones:
+        case '1':
+            Cadena_entrada = str(input('\n- Entrada: '))
+            Desplasamiento = int(input('- Desplasamiento: '))
+            Cambio = Desplasamiento
+            Cadena_salida = cifrar_caracteres(Caracteres, Cadena_entrada, True)
+            print(f'\n- Salida: {Cadena_salida}\n')
+        case '2':
+            Cadena_entrada = str(input('\n- Entrada: '))
+            Desplasamiento = int(input('- Desplasamiento: '))
+            Cambio = Desplasamiento
+            Cadena_salida = cifrar_caracteres(Caracteres, Cadena_entrada, False)
+            print(f'- Salida: {Cadena_salida}\n')
+        case '0':
+            print('\n¡ALGORITMO TERMINADO!')
+            run = False
+        case _:
+            print('\n¡OPCION NO RECONOCIDA!\n')
