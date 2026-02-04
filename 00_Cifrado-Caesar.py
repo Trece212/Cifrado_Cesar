@@ -71,20 +71,20 @@ def cifrar_caracteres (caracteres_cc=list, cadena_caracteres=str, cifrar=bool):
 run = True
 while run == True:
     print('-- OPCIONES --\n')
-    print('- Cifrar = 1\n- Decifrar = 2\n- Salir = 0\n')
+    print('- Cifrar = 1\n- Descifrar = 2\n- Salir = 0\n')
 
     opciones = input(': ')
     
     match opciones:
         case '1':
             Cadena_entrada = str(input('\n- Entrada: '))
-            Desplasamiento = int(input('- Desplasamiento: '))
+            Desplasamiento = int(input('- Desplazamiento: '))
             Cambio = Desplasamiento
             Cadena_salida = cifrar_caracteres(Caracteres, Cadena_entrada, True)
             print(f'\n- Salida: {Cadena_salida}\n')
         case '2':
             Cadena_entrada = str(input('\n- Entrada: '))
-            Desplasamiento = int(input('- Desplasamiento: '))
+            Desplasamiento = int(input('- Desplazamiento: '))
             Cambio = Desplasamiento
             Cadena_salida = cifrar_caracteres(Caracteres, Cadena_entrada, False)
             print(f'- Salida: {Cadena_salida}\n')
@@ -92,4 +92,4 @@ while run == True:
             print('\n¡ALGORITMO TERMINADO!')
             run = False
         case _:
-            print('\n¡OPCION NO RECONOCIDA!\n')
+            print('\n¡OPCIÓN NO RECONOCIDA!\n')

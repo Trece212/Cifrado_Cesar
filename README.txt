@@ -11,7 +11,7 @@ Posición original	Desplazamiento 	Nueva posición
 5 – F				    3			    1 – B 
 6 – G				    3			    2 – C 
 
-Para este ejemplo tenesmos 7 letras del alfabeto y el desplazamiento es de 3, cabe destacar en esta versión el 0 es tomado como una posición dado que en los arreglos este es tomado como la primera posición. Entonces si tenemos la letra A que está en la posición 0 y lo y asemos la sustitución 3 posiciones a la derecha obtendríamos como resultado la letra D.
+Para este ejemplo tenesmos 7 letras del alfabeto y el desplazamiento es de 3, cabe destacar en esta versión el 0 es tomado como una posición dado que en los arreglos este es tomado como la primera posición. Entonces si tenemos la letra A que está en la posición 0 y asemos la sustitución 3 posiciones a la derecha obtendríamos como resultado la letra D.
 
 Nuestra nueva versión sustituye tanto hacia la derecha como a la izquierda. Entonces las posiciones quedarían de la siguiente manera.
 
@@ -24,7 +24,7 @@ Posición original	Desplazamiento 	Desp. Derecha		Desp. Izquierda
 5 – F				    3			    1 – B 			    2 – C 
 6 – G				    3			    2 – C 			    3 – D 
 
-Además, el orden en de derecha a izquierda. Si el numero total de caracteres es par, entonces se comienza a sustituir de derecha a izquierda, Por ejemplo.
+Además, el orden de derecha a izquierda cambia si el número total de caracteres es par o impar, entonces se comienza a sustituir de derecha a izquierda, Por ejemplo.
 
 Cadena de caracteres: ABCD
 Total de caracteres: 4
@@ -32,14 +32,12 @@ Desplazamiento: 3 tomando en cuenta la tabla de arriba
 Sustitución: DFFA
 
 Ahora un ejemplo de Izquierda a derecha.
-
 Cadena de caracteres: ABCDE
 Total de caracteres: 5
 Desplazamiento: 3 tomando en cuenta la tabla de arriba
 Sustitución: EEGGA
 
 En esta versión todos los caracteres ocupan una posición en el arreglo, ya sea, letras, números y signos de puntuación incluso el espacio “ ” es considerado un carácter.
-
 Por ejemplo: Hola mundo, adiós mundo.
 Desplazamiento: 7
 Sustitución: jmO]CJxKGm@{dalNV{orPar3
