@@ -16,7 +16,7 @@ Caracteres = [
 # Variables para testeo
 Cambio = 7
 
-def calcular_posicion (caracteres_cp=list, caracter_cp=int, cambio_cp=int, direccion_cp=bool) -> int:
+def calcular_posicion (caracteres_cp=list, caracter_cp=int, cambio_cp=int, direccion_cp=bool):
     total_caracteres = len(caracteres_cp) - 1
 
     if direccion_cp == True:
@@ -39,7 +39,7 @@ def calcular_posicion (caracteres_cp=list, caracter_cp=int, cambio_cp=int, direc
         else:
             return posicion_caracter_na
 
-def cifrar_caracteres (caracteres_cc=list, cadena_caracteres=str, cifrar=bool) -> str:
+def cifrar_caracteres (caracteres_cc=list, cadena_caracteres=str, cifrar=bool):
     numero_caracteres = len(cadena_caracteres)
     par_inpar = numero_caracteres % 2 == 0
     numero = 0
