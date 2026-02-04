@@ -38,6 +38,6 @@ Desplazamiento: 3 tomando en cuenta la tabla de arriba
 Sustitución: EEGGA
 
 En esta versión todos los caracteres ocupan una posición en el arreglo, ya sea, letras, números y signos de puntuación incluso el espacio “ ” es considerado un carácter.
-Por ejemplo: Hola mundo, adiós mundo.
+Por ejemplo: 7 de Mayo del 2023 a las 3:34 pm.
 Desplazamiento: 7
-Sustitución: jmO]CJxKGm@{dalNV{orPar3
+Sustitución: 0Cah{Ó]3mCahiCÝ7Ý.{d{O]V{.4.ýCÑo3
